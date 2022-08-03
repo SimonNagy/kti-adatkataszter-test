@@ -1,0 +1,62 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<header class="bg-dark py-5">
+            <div class="container px-5">
+                <div class="row gx-5 justify-content-center">
+                    <div class="col-lg-6">
+                        <div class="text-center my-5">
+                            <h1 class="display-5 fw-bolder text-white mb-2">KTI Adatkataszter</h1>
+                            <p class="lead text-white-50 mb-4">A KTI Adatkataszter a Közlekedéstudományi Intézet Adatipari Kutatóközpont saját fejlesztésű adatgyűjtő, -feldolgozó és -szolgáltató platformja.</p>
+                            <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
+                                <a class="btn btn-primary btn-lg px-4 me-sm-3" href="#">Adatok felvitele</a>
+                                <a class="btn btn-outline-light btn-lg px-4" href="#">Adatok lekérése</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+ </header>
+
+
+<section class="py-5 border-bottom" id="features">
+            <div class="container px-5 my-5">
+                <div class="row gx-5">
+                    <div class="col-lg-4 mb-5 mb-lg-0">
+                        <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-collection"></i></div>
+                        <h2 class="h4 fw-bolder">Adatok felvitele</h2>
+                        <p>Az adatkataszteren keresztül a munkatársaknak lehetőségük van adatok felvitelére. Ezen adatok a teljes KTI-n
+                          belül megosztásra kerülnek, előremozdítva ezzel a szervezeti egységek közötti együttműködést, valamint lebontva
+                           az egységek közötti funkcionális gátakat.</p>
+                        <a class="text-decoration-none" href="#!">
+                            Adatfelvitel dokumentációja
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                    <div class="col-lg-4 mb-5 mb-lg-0">
+                        <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-building"></i></div>
+                        <h2 class="h4 fw-bolder">Adatok feldolgozása</h2>
+                        <p>Az adatkataszter webes felületén a munkatársak komplex lekérdezéseket valósíthatnak meg egy távoli gépen.
+                          A felület platform-független, így a lokális számítógép vagy mobil eszköz kapacitása nem limitáló tényező.</p>
+                        <a class="text-decoration-none" href="#!">
+                            Lekérdezések dokumentációja
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-toggles2"></i></div>
+                        <h2 class="h4 fw-bolder">Adatszolgáltatás</h2>
+                        <p>Az adatkataszter képes nyers adatok szolgáltatására. A munkatársak így egyszerűen és hatékonyan érnek el
+                        adatokat a KTI bármely szervezeti egységétől. Az adatigénylési folyamat nem kíván személyes megbeszéléseket.</p>
+                        <a class="text-decoration-none" href="#!">
+                            Adatszolgáltatás dokumentációja
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
