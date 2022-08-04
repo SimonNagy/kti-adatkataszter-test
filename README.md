@@ -2,5 +2,5 @@
 
 A Közlekedéstudományi Intézet Adatipari Kutatóközpontjának Adatkataszter projektje.
 
-
+...
  
