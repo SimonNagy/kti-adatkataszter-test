@@ -2,7 +2,7 @@ using ktiAdatkataszt.Models;
 using Microsoft.AspNetCore.Authentication.Negotiate;
 using Microsoft.EntityFrameworkCore;
 
-// manuálisan hozzáadott framework
+// manuálisan hozzáadott
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -10,7 +10,6 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System;
-using System.Configuration;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -32,8 +31,10 @@ builder.Services.AddAuthorization(options =>
     options.FallbackPolicy = options.DefaultPolicy;
 });
 
-builder.Services.AddDbContext<DatabaseContext>(o => o.UseSqlServer(Configuration.GetConnectionString
-    ("TestDB"), s => s.CommandTimeout(100)));
+builder.Configuration.GetConnectionString("testDB");
+
+// builder.Services.AddDbContext<DatabaseContext>(o => o.UseSqlServer(Configuration.GetConnectionString
+  //  ("TestDB"), s => s.CommandTimeout(100)));
 
 builder.Services.AddRazorPages();
 
