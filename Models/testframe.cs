@@ -5,12 +5,10 @@ using System.Threading.Tasks;
 
 namespace ktiAdatkataszt.Models
 {
-    public partial class testframe
+    public partial class Testframe
     {
         public int Id { get; set; }
-
-        public int No { get; set; }
-
+        
         public DateTime Dátum { get; set; }
 
         public string? Név { get; set; }

@@ -14,10 +14,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-// konfiguráció class implementálása
-
-
-
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -31,22 +27,17 @@ builder.Services.AddAuthorization(options =>
     options.FallbackPolicy = options.DefaultPolicy;
 });
 
+// .net 6.0 connection string config
 builder.Configuration.GetConnectionString("testDB");
 
+// ez a régi, nem mûködik rendesen csak itt hagyom, hogy ne felejtsem el
 // builder.Services.AddDbContext<DatabaseContext>(o => o.UseSqlServer(Configuration.GetConnectionString
-  //  ("TestDB"), s => s.CommandTimeout(100)));
+//  ("TestDB"), s => s.CommandTimeout(100)));
 
 builder.Services.AddRazorPages();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-if (!app.Environment.IsDevelopment())
-{
-    app.UseExceptionHandler("/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-    app.UseHsts();
-}
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
